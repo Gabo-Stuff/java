@@ -1,12 +1,10 @@
 package org.gaboCompany.myproject.ejercicios_dia_2;
 
 public class factorial1 {
-    private static int res;
 
-    private static int factorial(int calc, int num) {
-        calc*= num;
-        if (num != 1) factorial(calc, num - 1); else res = calc;
-        return res;
+    private static int factorial(int num) {
+        if (num == 1) return 1;
+        return num * factorial(num - 1);
     }
 
     private static boolean assertEquals(int exp, int act) {
@@ -15,11 +13,11 @@ public class factorial1 {
     }
 
     private static void testFactorial() {
-        if (assertEquals(factorial(1, 5), 120)) {
+        if (assertEquals(factorial(5), 120)) {
             System.out.println("bieeen");
         } else System.err.println("Noo");
 
-        if (assertEquals(factorial(1, 10), 3628800)) {
+        if (assertEquals(factorial(10), 3628800)) {
             System.out.println("bieeen");
         } else System.err.println("Noo");
     }
