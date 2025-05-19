@@ -1,4 +1,4 @@
-package org.gaboCompany.myproject;
+package org.gaboCompany.myproject.ejercicios_dia_2;
 
 import java.util.Dictionary;
 import java.util.Hashtable;

@@ -1,4 +1,4 @@
-package org.gaboCompany.myproject;
+package org.gaboCompany.myproject.ejercicios_dia_1;
 
 import java.util.Scanner;
 
