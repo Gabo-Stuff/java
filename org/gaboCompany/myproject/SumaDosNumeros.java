@@ -1,3 +1,5 @@
+package org.gaboCompany.myproject;
+
 import java.util.Scanner;
 
 public class SumaDosNumeros {

@@ -2,7 +2,7 @@ package org.gaboCompany.myproject;
 
 import org.apache.commons.lang3.StringUtils;
 
-public class palindromosAdvanced {
+public class palindromosAdvanced10 {
 
     private static String palindromos(String word) {
         String pali = "";

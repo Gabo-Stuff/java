@@ -3,7 +3,7 @@ package org.gaboCompany.myproject;
 import java.util.Dictionary;
 import java.util.Hashtable;
 
-public class contarPalabras {
+public class contarPalabras11 {
 
     private static Dictionary<Integer, Integer> contarPalabrasMeth(String phrase) {
         int startWithVowel = 0;

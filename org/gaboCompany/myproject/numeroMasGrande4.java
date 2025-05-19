@@ -5,7 +5,7 @@ import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.List;
 
-public class numeroMasGrande {
+public class numeroMasGrande4 {
     private static Dictionary<Integer, Integer> numeroMasGrandeMeth(List<Integer> list) {
         Integer bigger = list.get(0);
         Integer idx = 0;
