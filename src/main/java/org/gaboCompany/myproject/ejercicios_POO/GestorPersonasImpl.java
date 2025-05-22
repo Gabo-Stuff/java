@@ -10,10 +10,11 @@ public class GestorPersonasImpl {
 
         GestorPersonas gesting2 = new GestorPersonas("jonnhy",4,"melavo@tuenti.es");
         System.out.println(gesting2.toString());
-        System.out.println(gesting.esMayorDeEdad());
+        System.out.println(gesting2.esMayorDeEdad());
         System.out.println();
 
         gesting2.setCorreo("smith@educat.net");
+        gesting2.setEdad(35);
         System.out.println(gesting2.toString());
     }
 }
