@@ -10,9 +10,16 @@ public class GestorContactosImpl {
         agenda.addContacto(gesting);
         GestorContactos gesting2 = new GestorContactos("skibidi@yahoo.mx",666333999,"Carol Danvers");
         agenda.addContacto(gesting2);
-        System.out.println();
+        System.out.println("\n");
+
         System.out.println("Resultado de la búsqueda por nombre 'Carol Danvers':");
         agenda.findByNombre("Carol Danvers");
+        System.out.println();
+
+        System.out.println("Resultado de la búsqueda por substring 'dAn':");
+        agenda.findNameBySubstring("dAn");
+        System.out.println("\n");
+        
         System.out.println("Resumen general:");
         System.out.println(agenda.toString());
     }

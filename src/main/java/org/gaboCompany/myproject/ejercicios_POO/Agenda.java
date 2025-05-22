@@ -34,6 +34,12 @@ public class Agenda {
         }
     }
 
+    public void findNameBySubstring(String sub) {
+        for (GestorContactos contacto : this.contactos) {
+            if (contacto.getNombre().toLowerCase().contains(sub.toLowerCase())) System.out.printf("Encontrado '%s' en: " + contacto, sub);
+        }
+    }
+
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
