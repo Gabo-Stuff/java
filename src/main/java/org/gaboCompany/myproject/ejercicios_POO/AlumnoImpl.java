@@ -7,7 +7,7 @@ import java.util.Hashtable;
 
 public class AlumnoImpl {
     
-    private static void alumnoNotaMasAlta(Dictionary<String,Double> listaAlumnos) {
+    private static String alumnoNotaMasAlta(Dictionary<String,Double> listaAlumnos) {
         System.out.println("El mejor alumno eees: ");
         Double mayorNota = 0.0;
         String mayorAlumno = "";
@@ -22,9 +22,42 @@ public class AlumnoImpl {
             } 
         }
         System.out.println(mayorAlumno+"!! Con una media de "+mayorNota+"!!");
+        return mayorAlumno;
+    }
+
+    public static boolean assertEqualsMedia(Alumno a, double media) {
+        return a.calcMedia() == media;
+    }
+
+    public static boolean assertEqualsAprueba(Alumno a, boolean apruebaExpectations) {
+        return a.aprueba(a.calcMedia()) == apruebaExpectations;
+    }
+    public static boolean assertEqualsMejorAlumno(String alumno, String expectedAlumno) {
+        return alumno.equals(expectedAlumno);
+    }
+
+    public static void testAlumno() {
+        Alumno a1 = new Alumno("Juan", new ArrayList<>());
+        a1.addNota(5.0);
+        if (!assertEqualsMedia(a1, 5.0)) {
+            System.err.println("Error no igual media y tal");
+            return;
+        }
+        if (!assertEqualsAprueba(a1, true)) {
+            System.err.println("Error no igual aprueba y tal");
+            return;
+        }
+        Dictionary<String,Double> alumno = new Hashtable<>();
+        alumno.put(a1.getNombre(), a1.calcMedia());
+        if (!assertEqualsMejorAlumno(alumnoNotaMasAlta(alumno), "Juan")) {
+            System.err.println("Error no igual alumno mejor nota y tal");
+            return;
+        }
+        System.out.println("Todos tests bieene!");
     }
 
     public static void main(String args[]) {
+        /**
         Dictionary<String,Double> listaAlumnos = new Hashtable<>();
 
         Alumno gesting = new Alumno("MariaJosé", new ArrayList<>());
@@ -48,5 +81,8 @@ public class AlumnoImpl {
         System.out.println();
 
         alumnoNotaMasAlta(listaAlumnos);
+        */
+        // llamada alos tests
+        testAlumno();
     }
 }

@@ -32,12 +32,25 @@ public class Alumno {
     public void addNota(Double nota) {
         this.notas.add(nota);
     }
+    // desarrollando un poco y probandolo; así vamos viendo y tal (antes del ToString)
+    public void printAlumno() {
+        System.out.println("Nombre: " + this.nombre);
+        System.out.println("Notas: " + this.notas);
+    }
 
+    public boolean aprueba(Double mediaNotas) {
+        boolean res;
+        if (mediaNotas >= 5) res = true; else res = false;
+        return res;
+    }
     public Double calcMedia() {
-        Double sumNotas = 0.0;
-        for (Double nota: this.notas) sumNotas+=nota;
-        Double mediaNotas = sumNotas/this.notas.size();
-        if (mediaNotas >= 5) System.out.println("Aprueba."); else System.out.println("No aprueba.");
+        Double mediaNotas = 0.0;
+        if (!this.notas.isEmpty()) {
+            Double sumNotas = 0.0;
+            for (Double nota: this.notas) sumNotas+=nota;
+            mediaNotas = sumNotas/this.notas.size();
+        }
+        this.aprueba(mediaNotas);
         return mediaNotas;
     }
 
