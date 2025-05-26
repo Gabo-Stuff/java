@@ -1,4 +1,4 @@
-package org.gaboCompany.myproject.ejercicios_Herencia;
+package org.gaboCompany.myproject.ejercicios_Herencia.Menu_bebidas;
 
 public class Agua extends Bebida {
     protected boolean mineral;

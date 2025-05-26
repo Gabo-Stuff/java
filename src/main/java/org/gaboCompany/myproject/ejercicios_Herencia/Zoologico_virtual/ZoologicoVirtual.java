@@ -1,4 +1,4 @@
-package org.gaboCompany.myproject.ejercicios_Herencia;
+package org.gaboCompany.myproject.ejercicios_Herencia.Zoologico_virtual;
 
 import java.util.ArrayList;
 import java.util.List;

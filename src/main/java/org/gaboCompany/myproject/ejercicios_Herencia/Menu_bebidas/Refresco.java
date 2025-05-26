@@ -1,4 +1,4 @@
-package org.gaboCompany.myproject.ejercicios_Herencia;
+package org.gaboCompany.myproject.ejercicios_Herencia.Menu_bebidas;
 
 public class Refresco extends Bebida {
     protected boolean conGas;
