@@ -2,7 +2,7 @@ package org.gaboCompany.myproject.ejercicios_Herencia.Zoologico_virtual;
 
 import java.util.ArrayList;
 import java.util.List;
-public class ZoologicoVirtual {
+public class ZoologicoVirtualImpl {
     public static void main(String args[]) {
         List<Animal> animals = new ArrayList<>();
         animals.add(new Perro(10, "Óscar"));
