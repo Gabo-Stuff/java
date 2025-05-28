@@ -28,4 +28,6 @@ public class Entrada {
     public double calcularPrecioFinal() {
         return getPrecioBase();
     }
+
+    public String resumen() {return "";};
 }
